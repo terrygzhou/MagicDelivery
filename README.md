@@ -46,14 +46,49 @@ Enterprise Architecture artefacts for **MagicDelivery's AgenticEA** AI transform
 | AGT-SEC | Agent Security (controls, sandboxing, privacy) |
 | AGT-MAT | Agent Maturity Assessment |
 
-## Generation Method
+## ArcKit Plugin Workflow
 
-All artefacts produced using ArcKit plugins following strict dependency chains:
+This project was generated using two ArcKit plugins working together:
+
+### ArcKit TOGAF ADM Plugin
+
+The **TOGAF ADM** plugin drives the Architecture Development Method lifecycle, producing artefacts sequentially through dependency chains:
 
 ```
-TOGAF ADM:  PRIN → STKE → REQ → (ADR + RISK + STRAT) → ADMP → BPCM → APPINV → APPR → GAPA → TRANS → BORD → ACHG → REPO
-Agent Arch: AGT-INV → AGT-DES → (AGT-INT + AGT-GOV + AGT-SEC) → AGT-MAT
+Foundation → PRIN → STKE → REQ → (ADR + RISK + STRAT)
+    → ADMP → BPCM → (APPINV → APPR → GAPA → TRANS)
+    → BORD → ACHG
+    → REPO (cross-project synthesis)
 ```
+
+**Key features**:
+- Template-driven artefact generation with quality validation
+- Dependency-aware sequential processing
+- Enterprise governance framework integration
+- 15 artefacts covering full ADM cycle (Preliminary → Phase H)
+
+### ArcKit Agent Architecture Plugin
+
+The **Agent Architecture** plugin generates AI agent-specific design artefacts following parallel dependency chains:
+
+```
+AGT-INV → AGT-DES → (AGT-INT + AGT-GOV + AGT-SEC)
+    → AGT-MAT (requires all above)
+```
+
+**Key features**:
+- Agent inventory and design specification
+- Multi-agent orchestration patterns
+- Governance, security, and maturity frameworks
+- 6 artefacts covering agent lifecycle
+
+### Plugin Integration
+
+Both plugins follow strict dependency graphs, ensuring artefacts are generated in the correct order with proper traceability between:
+- Business capabilities and application portfolios
+- Agent designs and security controls
+- Gap analysis and transition planning
+- Governance frameworks and change management
 
 ## Artefacts
 
