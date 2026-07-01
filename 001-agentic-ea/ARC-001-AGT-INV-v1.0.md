@@ -1,4 +1,4 @@
-# Agent Inventory: AgenticEA — MarsPost Agent AI Transformation
+# Agent Inventory: AgenticEA — MagicDelivery Agent AI Transformation
 
 > **Template Origin**: Official | **ArcKit Version**: 5.15.2 | **Command**: `/arckit:agentinventory`
 
@@ -33,7 +33,7 @@
 
 ### Purpose
 
-This Agent Inventory (AGT-INV) provides a comprehensive catalogue of all **existing** and **planned** AI agents for the **AgenticEA — MarsPost Agent AI Transformation** programme. It documents each agent's purpose, capabilities, engagement channels, technology stack, maturity targets, integration requirements, data dependencies, and privacy/security considerations. This document serves as the authoritative agent registry, enabling governance, lifecycle management, and compliance tracking across the agent portfolio.
+This Agent Inventory (AGT-INV) provides a comprehensive catalogue of all **existing** and **planned** AI agents for the **AgenticEA — MagicDelivery Agent AI Transformation** programme. It documents each agent's purpose, capabilities, engagement channels, technology stack, maturity targets, integration requirements, data dependencies, and privacy/security considerations. This document serves as the authoritative agent registry, enabling governance, lifecycle management, and compliance tracking across the agent portfolio.
 
 ### Key Findings
 
@@ -70,7 +70,7 @@ TOTAL                            16       All phases     L1 → L4.1 avg
 
 ### 1.1 Existing Agent Portfolio
 
-**MarsPost currently has zero AI agents in production.** The current automation landscape consists of:
+**MagicDelivery currently has zero AI agents in production.** The current automation landscape consists of:
 
 | Category | Current Capability | Maturity | Limitations |
 |----------|-------------------|----------|------------|
@@ -137,7 +137,7 @@ Per **ADR-002** (Hybrid Agent-Human Handoff with Complexity-Based Routing):
 | Field | Detail |
 |-------|--------|
 | **Agent ID** | CSA-01 |
-| **Agent Name** | MarsPost Customer Service Agent |
+| **Agent Name** | MagicDelivery Customer Service Agent |
 | **Category** | Customer Service Agent |
 | **Purpose** | Conversational, multi-turn AI agent for common customer queries including parcel tracking, delivery status, address changes, fee information, and general service inquiries |
 | **Capabilities** | Multi-turn dialogue; intent recognition; context maintenance (10+ turns); natural language understanding; fee and service information retrieval; address change processing; complaint triage |
@@ -145,7 +145,7 @@ Per **ADR-002** (Hybrid Agent-Human Handoff with Complexity-Based Routing):
 | Field | Detail |
 |-------|--------|
 | **Customer Engagement Channels** | Mobile App (primary), Web Portal, Self-Service Kiosks, Call Centre (co-pilot mode) |
-| **Technology Stack** | Conversational LLM (multi-provider); RAG with authoritative MarsPost data sources; tokenisation layer (ADR-001); SDK embedding (ADR-004); multi-language NLU |
+| **Technology Stack** | Conversational LLM (multi-provider); RAG with authoritative MagicDelivery data sources; tokenisation layer (ADR-001); SDK embedding (ADR-004); multi-language NLU |
 | **Maturity Target** | **Foundation (Y1)**: Pilot → Beta → Production | **L1 → L4 (Managed)** by Month 12 |
 | **Integration Requirements** | CRM (INT-002), ERP, Pricing Systems, Product Systems, Consent Service, Agent Orchestrator |
 | **Data Dependencies** | Customer profiles; interaction history; service fee schedules; address databases; consent flags; escalation routing metadata |
@@ -202,7 +202,7 @@ Per **ADR-002** (Hybrid Agent-Human Handoff with Complexity-Based Routing):
 
 ### 3.2 Shopping Assistant Agents (SA)
 
-> **Category Purpose**: Assist customers with product discovery, shipping service selection, pricing comparison, and personalised offer generation within the MarsPost commerce experience.
+> **Category Purpose**: Assist customers with product discovery, shipping service selection, pricing comparison, and personalised offer generation within the MagicDelivery commerce experience.
 
 #### SA-01: Shipping Service Recommendation Agent
 
@@ -374,7 +374,7 @@ Per **ADR-002** (Hybrid Agent-Human Handoff with Complexity-Based Routing):
 
 ### 3.5 Retail Support Agents (RSA)
 
-> **Category Purpose**: Assist 4,000 MarsPost retail shop staff with customer queries, inventory lookups, and transaction support through AI co-pilot tools.
+> **Category Purpose**: Assist 4,000 MagicDelivery retail shop staff with customer queries, inventory lookups, and transaction support through AI co-pilot tools.
 
 #### RSA-01: Retail Staff Co-Pilot Agent
 
@@ -384,12 +384,12 @@ Per **ADR-002** (Hybrid Agent-Human Handoff with Complexity-Based Routing):
 | **Agent Name** | Retail AI Co-Pilot Agent |
 | **Category** | Retail Support Agent |
 | **Purpose** | AI co-pilot tool for retail counter staff that assists with customer queries by surfacing relevant information, suggesting responses, and automating routine lookups |
-| **Capabilities** | Customer query assistance; service information retrieval; inventory lookup; suggested response generation; transaction support; knowledge retrieval from MarsPost service catalog |
+| **Capabilities** | Customer query assistance; service information retrieval; inventory lookup; suggested response generation; transaction support; knowledge retrieval from MagicDelivery service catalog |
 
 | Field | Detail |
 |-------|--------|
 | **Customer Engagement Channels** | Retail Kiosks (4,000 shops), POS overlay, Retail Staff Tablet |
-| **Technology Stack** | Co-pilot LLM; POS system integration; inventory API; knowledge base; RAG with MarsPost service catalog; confidence scoring |
+| **Technology Stack** | Co-pilot LLM; POS system integration; inventory API; knowledge base; RAG with MagicDelivery service catalog; confidence scoring |
 | **Maturity Target** | **Scale (Y2)**: Pilot (500 shops) → **Mature (Y3)**: Full deployment (4,000 shops) | **L1 → L4 (Managed)** by Month 36 |
 | **Integration Requirements** | Retail POS Systems (APP-27); Inventory Management (APP-28); Agent Orchestrator; CRM; Pricing Systems |
 | **Data Dependencies** | Product catalogue; inventory levels; pricing data; customer transaction history; service information |
@@ -801,7 +801,7 @@ Per **AI-07** (Agent-to-Agent Collaboration), agents collaborate through the Age
 | Control | Implementation | Applies To |
 |---------|----------------|------------|
 | **PII Tokenisation** | Reversible tokenisation before cloud inference (ADR-001) | All customer-facing agents (CSA, SA, PTA) |
-| **On-Prem Processing** | Sensitive workflows processed on MarsPost infrastructure (ADR-001) | CSA-02 (complaints), COMPA-01 (consent) |
+| **On-Prem Processing** | Sensitive workflows processed on MagicDelivery infrastructure (ADR-001) | CSA-02 (complaints), COMPA-01 (consent) |
 | **Confidence Thresholding** | 70% threshold — below which AI offers human escalation (ADR-002) | All customer-facing agents |
 | **Response Validation** | Fact-checking against authoritative data sources (FR-016) | All agents producing customer-facing output |
 | **Audit Trail** | Tamper-evident logging of all AI interactions (FR-008) | All agents |
@@ -980,7 +980,7 @@ Per **AI-07** (Agent-to-Agent Collaboration), agents collaborate through the Age
 | Risk register aligned | ✅ |
 | Lifecycle management defined | ✅ |
 | Governance controls specified | ✅ |
-| MarsPost context maintained throughout | ✅ |
+| MagicDelivery context maintained throughout | ✅ |
 | ArcKit Version: 5.15.2 | ✅ |
 | Date: 2026-07-01 | ✅ |
 | Model: Qwen3.6-27B | ✅ |
